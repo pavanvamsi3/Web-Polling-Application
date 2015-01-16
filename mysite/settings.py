@@ -84,5 +84,6 @@ STATIC_URL = '/static/'
 
 STATIC_DIRS = (
 
-	'/polls/static/polls/'
+	'/polls/static/polls/',
+    '/static/mysite/'
 	)

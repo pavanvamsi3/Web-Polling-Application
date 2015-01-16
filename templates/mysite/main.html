@@ -1,0 +1,21 @@
+{% if apps_list %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Projects</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'polls/main_style.css' %}" />
+	</head>
+	<body>
+		<h2> List of apps </h2>
+		<ul>
+			{%for app in apps_list%}
+				<li><font size="5" face="verdana,arial,sans-serif"> <a href="{% url 'polls:index' %}">{{app}}</a>
+		</font></li>
+			{% endfor %}
+		</ul>
+	</body>
+{%else%}
+		<p>No apps are available</p>
+{%endif%}
+</html>
